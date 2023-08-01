@@ -1,11 +1,13 @@
 
-import Perfil from './components/Perfil'
+import Perfil from './components/Perfil';
+import Formulario from './components/Formulario';
 
 function App() {
 
   return (
     <>
-      <Perfil />
+      <Perfil nome='Tarcio' endereco='https://github.com/Tarcio2020.png' />
+      <Formulario />
     </>
   )
 }

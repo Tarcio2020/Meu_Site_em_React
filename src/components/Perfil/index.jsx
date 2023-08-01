@@ -1,16 +1,16 @@
 import './index.css';
 
-const Perfil = () => {
-    const usuario = {
-        nome: 'Tarcio Teles',
-        avatar: 'https://github.com/Tarcio2020.png',
-    
-    }
+const Perfil = ({ endereco, nome }) => {
+
 
     return (
         <div>
-            <img className='perfil-avatar' src={usuario.avatar}/>
-            <h3 className='perfil-titulo'>{usuario.nome}</h3>
+            {/* 
+            {JSON.stringify(props)} 
+            */}
+
+            <img className='perfil-avatar' src={endereco}/>
+            <h3 className='perfil-titulo'>{nome}</h3>
         </div>
     )
 }
