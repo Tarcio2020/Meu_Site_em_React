@@ -1,5 +1,6 @@
 const Formulario = () => {
-    let materiaA = 0;
+    let materiaA = useState(0);
+
     <form>
         <input type="number" placeholder="Nota da Matéria A" />
         <input type="number" placeholder="Nota da Matéria B" />
