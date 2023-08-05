@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <Perfil nome='Tarcio' endereco='https://github.com/Tarcio2020.png' />
+      <Perfil nomeUsuario='Tarcio2020' />
       <ReposList /> 
 
 {/*
