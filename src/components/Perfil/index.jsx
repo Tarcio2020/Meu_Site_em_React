@@ -5,13 +5,14 @@ const Perfil = ({ nomeUsuario }) => {
 
 
     return (
+        //para fazer o uso dos estilos
         <header className={styles.header}>
             {/* 
             {JSON.stringify(props)} 
             */}
 
-            <img className='perfil-avatar' src={`https://github.com/${nomeUsuario}.png`}/>
-            <h1 className='perfil-titulo'>
+            <img className={styles.avatar} src={`https://github.com/${nomeUsuario}.png`}/>
+            <h1 className={styles.name}>
                 {nomeUsuario}
             </h1>
         </header>
