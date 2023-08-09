@@ -11,3 +11,10 @@
     margin: 0 auto;
 
 }
+
+:root{
+    --corPrincipal: rgb(133, 56, 75);
+    --corSecundaria: #000;
+    --corText: #fff;
+
+}
