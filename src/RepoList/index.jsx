@@ -3,27 +3,28 @@ import styles from './ReposList.module.css';
 
 
 
-const ReposList = () => {
+const ReposList = ({nomeUsuario}) => {
     const [repos, setRepos] = useState([]);
     const [estaCarregando, setCarregando] = useState(true)
 
     useEffect(() => {
-        fetch('https://api.github.com/users/Tarcio2020/repos')
+        setCarregando(true);
+        fetch(`https://api.github.com/users/${nomeUsuario}/repos`)
         .then(res => res.json())
         .then(resJson => {
             setTimeout(() => {
                 setCarregando(false)
                 setRepos(resJson);
-            }, 5000)
+            }, 3000)
         })
-    }, []);
+    }, [nomeUsuario]);
 
 
     return (
         <div className="container">
-        {estaCarregando && (
+        {estaCarregando ? (
             <h1>Carregando...</h1>  
-        )}
+        ):(
         <ul className={styles.list} >
             {repos.map(({id, name, language, html_url}) => (
                 <li className={styles.listItem} key={id}>
@@ -40,6 +41,7 @@ const ReposList = () => {
             ))}
             <li>Repositório</li>
         </ul>
+        )}
     </div>
     )
 }
